@@ -11,3 +11,11 @@
 
 %:
 	dh $@ 
+override_dh_auto_build:
+	cd g711conversions/ && $(MAKE) && cd ../
+	cd hack_library/ && $(MAKE) && cd ../
+	cd rtpinsertsound_v3.0/ && $(MAKE) && cd ../
+
+override_dh_auto_install:
+	dh_installdirs
+	install rtpinsertsound_v3.0/rtpinsertsound $(CURDIR)/debian/rtpinsertsound/usr/bin/
