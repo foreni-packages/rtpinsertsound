@@ -2,7 +2,7 @@ Source: rtpinsertsound
 Section: utils
 Priority: extra
 Maintainer: Devon Kearns <dookie@kali.org>
-Build-Depends: debhelper (>= 8.0.0), libfindrtp, libpcap-dev
+Build-Depends: debhelper (>= 8.0.0), libfindrtp, libpcap-dev, libnet1-dev
 Standards-Version: 3.9.3
 Homepage: http://www.hackingvoip.com/sec_tools.html
 Vcs-Git: ssh://git@git.kali.org/packages/rtpinsertsound.git
@@ -10,7 +10,7 @@ Vcs-Browser: http://git.kali.org/gitweb/?p=packages/rtpinsertsound.git;a=summary
 
 Package: rtpinsertsound
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libpcap0.8
+Depends: ${shlibs:Depends}, ${misc:Depends}, libpcap0.8, libnet1
 Description: Inserts audio into a specified stream
  A tool to insert audio into a specified audio (i.e. RTP) 
  stream was created in the August - September 2006 timeframe. 
